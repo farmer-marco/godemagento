@@ -39,6 +39,7 @@ Whoops, it looks like you have an invalid PHP version.</h3></div><p>Magento supp
  */
 error_reporting(E_ALL | E_STRICT);
 
+
 /**
  * Compilation includes configuration file
  */
