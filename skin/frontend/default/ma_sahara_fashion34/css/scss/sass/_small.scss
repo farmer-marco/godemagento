@@ -1,0 +1,117 @@
+@media (min-width: 768px) {
+  .item-inner .des-container {
+    // text-align: left;
+    // padding-right: 50px;
+  }
+  .gode-carousel {
+    padding-top: 127px;
+    margin-bottom: -100px!important;
+    .slick-background-image {
+      height: 440px;
+    }
+    .slick-slide {
+      .descricao-wrap {
+        margin-left: 100px;
+        .descricao {
+          width: 140px;
+          height: 140px;
+
+          .descricao-inner {
+            h1, h2, p {
+              text-shadow: 1px 1px rgba(0,0,0,0.15);
+            }
+            h1 {
+              font-size: 12pt;
+            }
+            h2, p {
+              font-size: 10pt;
+            }
+          }
+        }
+      }
+    }
+  }
+  .top-link {
+    .top-cart-wrapper {
+      background: none;
+      background-color: #FFF;
+    }
+    #search_mini_form .search-wrapper input[type=search] {
+      background: #FFF url(/media/theme/default/search-icon.png) no-repeat 4px center;
+    }
+    ul.links li a {
+      color: $link-color;
+    }
+    select#select-language {
+      color: $link-color;
+    }
+  }
+  .main {
+    margin: 127px auto 0!important;
+  }
+  .header-container {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    .header .logo img {
+      @include transition-property(all);
+      @include transition-duration(0.1s);
+    }
+    .header {
+      background-color: #FFF;
+    }
+    .nav-container {
+      @include transition-property(all);
+      @include transition-duration(0.1s);
+    }
+    a.social {
+      font-size: 20pt !important;
+      padding: 10px 5px !important;
+    }
+    .scrolled {
+      .logo {
+        img {
+          height: 35px;
+        }
+      }
+      .nav-container {
+        height: 35px;
+      }
+    }
+  }
+
+  .pt_custommenu div.popup .block1 {
+    padding: 5px 30px 30px 30px !important;
+  }
+  h4.itemMenuName.level1 {
+      margin-top: 20px;
+  }
+  .cor-menu {
+    display: inline-block !important;
+    margin: 0 5px 0 0;
+    width: 35px;
+    height: 35px;
+    .nav-cor-sample {
+      margin: 0;
+      float: none;
+    }
+  }
+  .products-slider-thumbs {
+    .slick-slide {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    h1 {
+      text-align: left;
+      padding-left: 5vw;
+      font-size: 14pt;
+      margin: 1em 0 1em 0;
+    }
+    .slick-prev, .slick-next {
+      background: rgba(245, 245, 245, 1);
+    }
+    .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+     background: rgba(245, 245, 245, 1);
+    }
+  }
+}

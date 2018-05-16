@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Gode_RenderSlider>
+      <active>true</active>
+      <codePool>local</codePool>
+    </Gode_RenderSlider>
+    <Gode_DestaquesSlider>
+    	<active>true</active>
+    	<codePool>local</codePool>
+    </Gode_DestaquesSlider>
+  </modules>
+</config>

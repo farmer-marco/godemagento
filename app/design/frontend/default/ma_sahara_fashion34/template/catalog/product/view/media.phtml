@@ -1,0 +1,90 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product media data template
+ *
+ * @see Mage_Catalog_Block_Product_View_Media
+ */
+?>
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+?>
+
+<?php if (count($this->getGalleryImages()) > 0): ?>
+    <?php foreach ($this->getGalleryImages() as $_image): ?>
+        <div class="product-image-wrapper text-center hidden-xs">
+            <a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(1200,1200); ?>" data-toggle="lightbox" title="<?php echo $this->escapeHtml($this->getImageLabel()) ?>" data-gallery="product-gallery">
+                <?php
+                    $_img = '<img id="image" src="'.$this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(600,600).'" data-magnify-src="'.$this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(1200,1200).'"alt="'.$this->escapeHtml($this->getImageLabel()).'" class="zoom" title="'.$this->escapeHtml($this->getImageLabel()).'" />';
+                    echo $_helper->productAttribute($_product, $_img, 'image');
+                ?>
+            </a>
+        </div>
+    <?php endforeach; ?>
+    <div class="carousel-wrapper-mobile visible-xs">
+        <div class="product-slider">
+            <?php foreach ($this->getGalleryImages() as $_image): ?>
+                <div>    
+                    <?php
+                        $_img = '<img id="image" src="'.$this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(600,600).'" alt="'.$this->escapeHtml($this->getImageLabel()).'" title="'.$this->escapeHtml($this->getImageLabel()).'" />';
+                        echo $_helper->productAttribute($_product, $_img, 'image');
+                    ?>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <script type="text/javascript">
+        jQuery(function ($) {
+            $(".zoom").magnify();
+            $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+            $('.product-slider').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
+                var i = (currentSlide ? currentSlide : 0) + 1;
+                $('.carousel-counter').text(i + '/' + slick.slideCount);
+            });
+            $('.product-slider').slick ({
+                dots: true,
+                infinite: true,
+                arrows: false,
+                adaptiveHeight: true
+            })
+        });
+        
+    </script>
+    
+<?php endif; ?>
+
+<!-- 
+<?php if (count($this->getGalleryImages()) > 1): ?>
+<?php foreach ($this->getGalleryImages() as $_image): ?>
+    <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(56); ?>" width="56" height="56" alt="<?php echo $this->escapeHtml($_image->getLabel()) ?>" />
+<?php endforeach; ?>
+    
+<?php endif; ?> -->

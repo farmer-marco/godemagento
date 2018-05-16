@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<sahara_fashion3>
+    <resources>
+        <resource>
+            <title>Sahara Fashion 3 Home page</title>
+            <identifier>fashion3_home</identifier>
+            <root_template>one_column</root_template>
+            <content><![CDATA[<div class="home-content">{{block type="cms/block" block_id="banner_home_content"}}</div>]]></content>
+            <sort_order>1</sort_order>
+            <is_active>1</is_active>
+        </resource>
+    </resources>
+</sahara_fashion3>

@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<sahara_fashion3>
+    <blocks>
+        <block>
+            <title>Banner Static</title>
+            <identifier>banner_static</identifier>
+            <content>
+                    <![CDATA[<div class="banner-static-contain">
+<div class="container">
+<div class="container-inner">
+<div class="home-banner-static row">
+<div class="banner-box banner-box1 col-xs-12 col-sm-4 col-sms-12">
+<div class="banner-box-inner">
+<h2>MONEY BACK GUARANTEED</h2>
+<div class="banner-box-content">Lorem ipsum dolor sit amet dont know what u say</div>
+</div>
+</div>
+<div class="banner-box banner-box2 col-xs-12 col-sm-4 col-sms-12">
+<div class="banner-box-inner">
+<h2>FREE WORLDWIDE DELIVERY</h2>
+<div class="banner-box-content">Lorem ipsum dolor sit amet dont know what u say</div>
+</div>
+</div>
+<div class="banner-box banner-box3 col-xs-12 col-sm-4 col-sms-12">
+<div class="banner-box-inner">
+<h2>ONLINE SUPPORT 24/7</h2>
+<div class="banner-box-content">Lorem ipsum dolor sit amet dont know what u say</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+
+        <block>
+            <title>Footer Static</title>
+            <identifier>footer_static</identifier>
+            <content>
+                      <![CDATA[
+                            <div class="f-col f-col3 col-sm-6 col-md-4 col-sms-6 col-smb-12">
+<div class="footer-static-title">
+<h3>our service</h3>
+</div>
+<div class="footer-static-content">
+<ul>
+<li class="first"><a href="{{store direct_url="customer/account/"}}">My Account</a></li>
+<li><a href="{{store direct_url="sales/order/history/"}}">Order History</a></li>
+<li><a href="{{{store direct_url="sales/guest/form/"}}">Returns</a></li>
+<li><a href="#">Specials</a></li>
+<li><a href="#">Mobiles</a></li>
+<li class="last"><a href="{{store direct_url="catalog/seo_sitemap/category/"}}">Site Map</a></li>
+</ul>
+</div>
+</div>
+<div class="f-col col-sm-6 col-md-4 col-sms-6 col-smb-12">
+<div class="footer-static-title">
+<h3>information</h3>
+</div>
+<div class="footer-static-content">
+<ul>
+<li class="first"><a href="{{store direct_url="about-magento-demo-store"}}">About us</a></li>
+<li><a href="{{store direct_url="customer/account/"}}">Delivery Information</a></li>
+<li><a href="{{store direct_url="privacy-policy-cookie-restriction-mode"}}">Privacy Policy</a></li>
+<li><a href="#">Discount</a></li>
+<li><a href="{{store direct_url="customer-service"}}">Custom Service</a></li>
+<li class="last"><a href="{{store direct_url="catalogsearch/term/popular"}}">Terms &amp; Condition</a></li>
+</ul>
+</div>
+</div>
+<div class="f-col f-col2 col-sm-6 col-md-4 col-sms-6 col-smb-12">
+<div class="footer-static-title">
+<h3>our support</h3>
+</div>
+<div class="footer-static-content">
+<ul>
+<li class="first"><a href="{{store direct_url="catalog/seo_sitemap/category"}}">Sitemap</a></li>
+<li><a href="{{store direct_url="privacy-policy-cookie-restriction-mode"}}">Privacy Policy</a></li>
+<li><a href="{{store direct_url="customer/account/index"}}">Your Account</a></li>
+<li><a href="{{store direct_url="catalogsearch/advanced"}}">Advanced Search</a></li>
+<li><a href="{{store direct_url="catalogsearch/term/popular"}}">Terms &amp; Condition</a></li>
+<li class="last"><a href="{{store direct_url="contacts"}}">Contact Us</a></li>
+</ul>
+</div>
+</div>
+                        ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+
+        <block>
+            <title>Banner Left</title>
+            <identifier>banner_left</identifier>
+            <content>
+                      <![CDATA[<div class="banner-left"><a href="#"><img src="{{media url="wysiwyg/banner-left.jpg"}}" alt="" /></a></div>]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+
+
+        <block>
+            <title>Banner Home Content</title>
+            <identifier>banner_home_content</identifier>
+            <content>
+                      <![CDATA[
+					  <div class="banner-home-content">
+<div class="banner-content row">
+<div class="col col-1 col-xs-12 col-sm-8">
+<div class="col-inner">
+<div class="banner-block banner-block-1"><a href="{{store direct_url="women.html"}}"><img src="{{media url="wysiwyg/banner-home-content1.jpg"}}" alt="" /></a>
+<div class="text-des-container">
+<div class="text-des">
+<h2>SAHARA MEN&rsquo;S JEWELRY</h2>
+<p>Get more jewelry accessories from Sahara spring jewelry Collection 2014</p>
+</div>
+</div>
+</div>
+<div class="banner-content-inner row">
+<div class="col col-3 col-xs-12 col-sm-6">
+<div class="col-inner">
+<div class="banner-block banner-block-2"><a href="{{store direct_url="women/dresses.html"}}"><img src="{{media url="wysiwyg/banner-home-content2.jpg"}}" alt="" /></a>
+<div class="text-des-container">
+<div class="text-des">
+<h2>BEAUTIFUL &amp; FRESH</h2>
+<p>Make your life more colorful !</p>
+</div>
+</div>
+</div>
+<div class="banner-block banner-block-3"><a href="{{store direct_url="women/accessories.html"}}"><img src="{{media url="wysiwyg/banner-home-content3.jpg"}}" alt="" /></a>
+<div class="text-des-container">
+<div class="text-des">
+<h2>SAHARA LOOKBOOK</h2>
+<p>Spring / Summer 2014</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col col-4 col-xs-12 col-sm-6">
+<div class="col-inner">
+<div class="banner-block banner-block-4"><a href="{{store direct_url="men/clothing.htmll"}}"><img src="{{media url="wysiwyg/banner-home-content4.jpg"}}" alt="" /></a>
+<div class="text-des-container">
+<div class="text-des">
+<h2>FASHION MENSWEAR</h2>
+<p>Spring Collections 2014</p>
+</div>
+</div>
+</div>
+<div class="banner-block banner-block-5"><a href="{{store direct_url="men/shoes.html"}}"><img src="{{media url="wysiwyg/banner-home-content5.jpg"}}" alt="" /></a>
+<div class="text-des-container">
+<div class="text-des">
+<h2>CASUAL SHOES</h2>
+<p>Sahara casual shoes collection 2014</p>
+</div>
+</div>
+</div>
+<div class="banner-block banner-block-6"><a href="{{store direct_url="men/bags.html"}}"><img src="{{media url="wysiwyg/banner-home-content6.jpg"}}" alt="" /></a>
+<div class="text-des-container">
+<div class="text-des">
+<h2>NEW EXCLUSIVES</h2>
+<p>Our best beautiful multitakers - 30% OFF</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col col-2 col-xs-12 col-sm-4">
+<div class="col-inner">
+<div class="banner-block banner-block-7"><a href="{{store direct_url="jewelry.html"}}"><img src="{{media url="wysiwyg/banner-home-content7.jpg"}}" alt="" /></a>
+<div class="text-des-container">
+<div class="text-des">
+<h2>Vintage CLOTHING</h2>
+<p>Sale away with 58 new styles up 80 % off</p>
+</div>
+</div>
+</div>
+<div class="banner-block banner-block-8"><a href="{{store direct_url="men.html"}}"><img src="{{media url="wysiwyg/banner-home-content8.jpg"}}" alt="" /></a>
+<div class="text-des-container">
+<div class="text-des">
+<h2>COLORFUL sweater</h2>
+<p>Get the new look with only $250.00</p>
+</div>
+</div>
+</div>
+<div class="banner-block banner-block-9"><a href="{{store direct_url="footwear.html"}}"><img src="{{media url="wysiwyg/banner-home-content9.jpg"}}" alt="" /></a>
+<div class="text-des-container">
+<div class="text-des">
+<h2>GRUNGE STREET STYLE</h2>
+<p>Become a grunge guy now !</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+
+
+
+
+        <block>
+            <title>Custom Menu</title>
+            <identifier>pt_item_menu_custom_menu</identifier>
+            <content>
+                   <![CDATA[
+				   <div class="static_block_custom_menu">
+<ul>
+<li><a href="{{store direct_url="women.html"}}"><img src="{{media url="wysiwyg/block_custom_1.jpg"}}" alt="" /></a></li>
+<li><a href="{{store direct_url="men.html"}}"><img src="{{media url="wysiwyg/block_custom_2.jpg"}}" alt="" /></a></li>
+<li><a href="{{store direct_url="footwear.html"}}"><img src="{{media url="wysiwyg/block_custom_3.jpg"}}" alt="" /></a></li>
+</ul>
+</div>
+				   ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+
+
+
+        <block>
+            <title>block header</title>
+            <identifier>block_header</identifier>
+            <content>
+                 <![CDATA[<div class="follow-us">
+<h2>Follow us on:</h2>
+<ul>
+<li class="face"><a href="#"><img src="{{media url="wysiwyg/face.png"}}" alt="" /></a></li>
+<li class="twitter"><a href="#"><img src="{{media url="wysiwyg/twitter.png"}}" alt="" /></a></li>
+<li class="rss"><a href="#"><img src="{{media url="wysiwyg/rss.png"}}" alt="" /></a></li>
+</ul>
+</div>]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		
+		<block>
+            <title>block newsletter</title>
+            <identifier>block_newsletter</identifier>
+            <content>
+                 <![CDATA[<div class="newsleter-inner">{{block type="newsletter/subscribe" name="left.newsletter" template="newsletter/subscribe.phtml"}}</div>]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		
+		<block>
+            <title>footer right</title>
+            <identifier>footer_right</identifier>
+            <content>
+                 <![CDATA[
+				 <div class="footer-right">
+<div class="contact-us">
+<div class="footer-static-title">
+<h3>contact us</h3>
+</div>
+<div class="footer-static-content">
+<div class="address">1234 Heaven Stress, Beverly Hill OldYork UnitedState of Lorem</div>
+<div class="phone">
+<p>(800) 0123 4567 890</p>
+<p>(800) 0987 654 321</p>
+</div>
+<div class="email">
+<p>Support1@plazathemes.com</p>
+<p>Support2@plazathemes.com</p>
+</div>
+</div>
+</div>
+<div class="follow-us-on">
+<div class="footer-static-title">
+<h3>FOLLOW US ON</h3>
+</div>
+<div class="footer-static-content">
+<ul>
+<li><a class="face" href="#">face</a></li>
+<li><a class="rss" href="#">rss</a></li>
+<li><a class="google" href="#">google</a></li>
+<li><a class="twitter" href="#">twitter</a></li>
+</ul>
+</div>
+</div>
+</div>
+				 ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		
+		<block>
+            <title>Static Sub Menu Col Right</title>
+            <identifier>pt_menu_idcat_4_right</identifier>
+            <content>
+                 <![CDATA[
+				<div class="sub-menu-col4"><a href="{{store direct_url="women.html"}}"><img src="{{media url="wysiwyg/custom_menu1.jpg"}}" alt="" /></a></div>
+				 ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		
+    </blocks>
+
+</sahara_fashion3>
+

@@ -1,0 +1,60 @@
+<?php
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_SocialLogin
+ * @copyright   Copyright (c) 2014 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+?>
+
+<div class="col-sm-offset-2 col-sm-8 account-login<?php if (!$this->helper('customer')->isRegistrationAllowed()) echo ' login-only' ?> pslogin-form">
+
+    <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+    <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form" class="form-horizontal col-sm-offset-2 col-sm-8">
+        <?php echo $this->getBlockHtml('formkey'); ?>
+        <?php if ($this->helper('customer')->isRegistrationAllowed()): ?>
+            <?php if (Mage::helper('pslogin')->modulePositionEnabled('login') && Mage::helper('pslogin')->hasButtons()) : ?>
+                <?php echo $this->getChildHtml('pslogin_buttons'); ?>
+            <?php endif; ?>
+        <?php endif; ?>
+        <h2><?php echo $this->__('Ou entre com a sua conta da Godê') ?></h2>
+        <div class='form-group'>
+            <input type="email" autocapitalize="off" autocorrect="off" spellcheck="false" name="login[username]" value="<?php echo $this->escapeHtml($this->getUsername()) ?>" id="email" class="input-text required-entry validate-email form-control" title="<?php echo $this->__('Email Address') ?>" placeholder="Email" />
+        </div>
+        <div class="form-group">
+            <input type="password" name="login[password]" class="col-sm-10 input-text required-entry validate-password form-control" id="pass" title="<?php echo $this->__('Password') ?>" placeholder="<?php echo $this->__('Password') ?>"/>
+        </div>
+        <div class="form-group">
+            <?php echo $this->getChildHtml('persistent.remember.me'); ?>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><?php echo $this->__('Login') ?></button>
+        </div>
+        <?php echo $this->getChildHtml('form.additional.info'); ?>
+        <a href="#" class="pull-left" onclick="window.location='<?php echo $this->getCreateAccountUrl() ?>';"><?php echo $this->__('Create an Account') ?></a>
+        <a href="<?php echo $this->getForgotPasswordUrl() ?>" class="pull-right"><?php echo $this->__('Forgot Your Password?') ?></a>
+        
+        
+                
+
+                
+            
+        <?php if (Mage::helper('checkout')->isContextCheckout()): ?>
+            <input name="context" type="hidden" value="checkout" />
+        <?php endif; ?>
+    </form>
+    <script type="text/javascript">
+    //<![CDATA[
+        var dataForm = new VarienForm('login-form', true);
+    //]]>
+    </script>
+</div>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <!-- <action method="addJs" ifconfig="custommenu/general/enabled"> -->
+                <!-- <script>magentothem/ma.jq.slide.js</script> -->
+            <!-- </action> -->
+            <action method="addCss" ifconfig="custommenu/general/enabled">
+                <stylesheet>magentothem/css/custommenu.css</stylesheet>
+            </action>
+            <action method="addJs" ifconfig="custommenu/general/enabled">
+                <script>magentothem/custommenu/custommenu.js</script>
+            </action>
+        </reference>
+        <reference name="catalog.topnav">
+            <action method="setTemplate" ifconfig="custommenu/general/enabled">
+                <template>magentothem/custommenu/custommenu.phtml</template>
+            </action>
+        </reference>
+        <reference name="top.search">
+            <action method="setTemplate" ifconfig="searchbycaterory/settings/enabled">
+                <template>magentothem/searchbycaterory/form.phtml</template>
+            </action>
+            <block type="searchbycaterory/form_contents" name="top.search.content" as="topSearchContent" template="magentothem/searchbycaterory/form/contents.phtml"/>
+        </reference>
+    </default>
+</layout> 

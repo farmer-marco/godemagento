@@ -1,0 +1,72 @@
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : 'your-app-id',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.12'
+    });
+  };
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/pt_BR/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="fb-customerchat"
+  page_id="492826857573360"
+  theme_color="#0084ff"
+  logged_in_greeting="Olá, precisa de ajuda?"
+  logged_out_greeting="Olá, precisa de ajuda?"
+>
+</div>
+<?php
+$className = Mage::getConfig()->getBlockClassName('custommenu/custommenu');
+            $block = new $className();  
+ $_menu = $block->renderCategoriesMenuHtml(0,'level-top') ?>
+<?php if($_menu): ?>
+    <div class="cover" onclick="toggleSidenav();"></div>
+    <div class="hamburger img-circle visible-xs" id="hamburger" onclick="toggleSidenav();">
+        <button id="el"></button>
+    </div>
+    <nav class="visible-xs">
+        <ul>
+            <li>
+                <?php echo $this->getLayout()->createBlock('page/switch')->setTemplate('page/switch/languages.phtml')->toHtml(); ?>
+            </li>
+            
+            <li class='nav-search'>
+                <?php echo $this->getBlockHtml('top.search') ?>
+            </li>
+            <?php echo $_menu ?>
+            <li class="no-children">
+                <span class="col-xs-12">
+                    <a href="/blog">
+                        <h2>Blog</h2>
+                    </a>
+                </span>
+            </li>
+            <li class="no-children">
+                <span class="col-xs-12">
+                    <a href="/sobre">
+                        <h2><?php echo $this->__('A Godê') ?></label></h2>
+                    </a>
+                </span>
+            </li>
+            <li class="no-children">
+                <span class="col-xs-12">
+                    <a href="<?php echo Mage::getUrl('customer/account'); ?>">
+                        <h2>Minha Conta</h2>
+                    </a>
+                </span>
+            </li>
+            <li>
+                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('block_header')->toHtml() ?>
+            </li>
+        </ul>
+      </div>
+    </nav>
+<?php endif ?>

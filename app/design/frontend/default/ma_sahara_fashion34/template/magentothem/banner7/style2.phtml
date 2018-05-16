@@ -1,0 +1,82 @@
+<?php 
+/******************************************************
+ * Website: http://www.plazathemes.com
+*******************************************************/
+?> 
+<?php if($this->getConfig('enabled')){ ?>	  <!-- start enable -->
+	<?php $cur_store = Mage::app()->getStore()->getId() ?>
+	
+	<div class="gode-carousel">
+		
+		<?php
+			// Get data banner
+			$slide = $this->getDataBanner7();
+			$path = Mage::getBaseUrl('media');					
+			$qty_Item = $this->getConfig('qty_item');
+			// if ($this->getConfig('auto')) { $auto = 'true'; } else { $auto = 'false'; }
+			/* Get max item & qty item */
+			if ($qty_Item > count($slide)) {
+				$qty_Item = count($slide);
+			}
+		?>
+		<?php
+			$i = 1;
+			foreach($slide as $s) {
+				if($i <= $qty_Item) {
+					//Get images slide show
+					$st1 = $s['image'];
+					$p1 = strpos($st1,'banner7');
+					$st2 = substr($st1,$p1+7);
+					$p2 = strpos($st2,'"');
+					$imag = substr($st2,0,$p2);
+			?>
+			<?php if ($s['title'] != 'mobile') { ?>
+				<div class='slick-wrapper'>
+					<div class='slick-background-image'>
+						<a href="<?php echo $s['link'] ?>">
+							<img src="<?php echo $path.'magentothem/banner7'.$imag;?>" alt="" title="#banner-caption-<?php echo $i; ?>"/>
+							<?php if ($s['description'] != '') { ?>
+								<div class='descricao-wrap <?php if ($i == 1) { ?>active <?php } ?>'>
+									<div class="descricao img-circle">
+										<div class="descricao-inner">
+											<?php echo $this->__($s['description']) ?>
+											<a href="<?php echo $s['link'] ?>" class="btn btn-primary btn-xs">Confira</a>
+										</div>
+									</div>
+								</div>
+							<?php } ?>
+						</a>
+						
+					</div>
+				</div>
+			<?php } ?>
+			<?php $i++; ?>
+		<?php
+                }//end if
+            } // end foreach
+		?>
+	</div>
+	
+	
+	<script type="text/javascript">
+        jQuery(function ($) {
+        	$('.gode-carousel').slick({
+        		lazyLoad: "ondemand",
+        		dots: true,
+        		infinite: true,
+        		autoplay: true,
+        		arrows: false,
+        		mobileFirst:true,
+        		adaptiveHeight: true
+        	});
+        	$('.gode-carousel').on('afterChange', function(e,s,c) {
+        		$(this).find('.descricao-wrap').addClass('active');
+        	});
+        	$('.gode-carousel').on('beforeChange', function(e,s,c) {
+        		$(this).find('.descricao-wrap').removeClass('active');
+        	});
+        	
+
+        });
+	</script>
+<?php } ?> <!-- end enable -->

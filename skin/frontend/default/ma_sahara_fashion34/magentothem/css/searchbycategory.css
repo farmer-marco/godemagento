@@ -1,0 +1,38 @@
+.header .form-search #cat { width: 103px; float:left; height: 32px; padding: 11px 3px 12px; background: #eee; border: none; border-top: none; border-bottom: none; border-color: #e4e4e4; color: #555; text-align: left; }
+
+.header .form-search input.input-text:focus { background-color: #f5f5f5;}
+.header .form-search label { width: 22px; float: left; }
+#search_mini_form .header .form-search button.button { float: right; margin-right: 8px; }
+
+
+.header .form-search .dropdown-toggle {
+width: 103px !important;
+box-shadow: none !important;
+background: #f5f5f5 !important;
+border: none !important;
+border-right: 1px solid #ebebeb !important;
+border-radius: 0 !important;
+height: 25px;
+padding: 0;
+
+}
+.bootstrap-select .btn:focus {}
+.header .form-search .bootstrap-select.btn-group { width: auto !important;}
+.bootstrap-select.btn-group .btn .filter-option { padding-left: 10px;}
+.bootstrap-select {
+    display: block !important;
+}
+
+.form-search .dropdown-menu {
+top: 32px;
+height: 300px !important;
+border-radius: 0 0 4px 4px;
+box-shadow: none;
+left: -2px !important;
+padding: 0 0 20px;
+text-align: left;
+}
+.bootstrap-select {
+display: block !important;
+z-index: 111111;
+}

@@ -1,0 +1,48 @@
+.opc {
+	.panel-title {
+		display: inline-block;
+	}
+	.panel-edit {
+		
+	}
+	.form-list li.wide select {
+	    width: 100%;
+	}
+	li.section {
+		border-bottom: 0;
+		margin-bottom: 0;
+	}
+	.sp-methods {
+		dt {
+			input {
+				margin-right: 10px;
+			}
+		}
+	}
+	#opc-login h3 {
+		border-bottom: 0;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.pslogin-block {
+		text-align: center;
+	}
+	
+	.please-wait {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		clear: both;
+		width: 100%;
+	    text-align: center;
+	}
+}
+#captcha-input-box-register_during_checkout, #captcha-input-box-guest_checkout {
+	margin-bottom: 15px;
+}
+.captcha-image {
+	margin-bottom: 15px;
+}
+
+label {
+	font-weight: 100;
+}

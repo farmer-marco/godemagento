@@ -1,0 +1,19 @@
+<form action="<?php echo Mage::getUrl('destaquesslider/index/save') ?>" method="post">
+  <fieldset>
+    <ul>
+     <li>
+       <label for="title">Título</label>
+       <input type="text" id="title" name="title" />
+     </li>
+     <li>
+       <label for="category_name">Categoria</label>
+       <input type="text" id="category_name" name="category_name" />
+     </li>
+     <li>
+        <input type="submit" value="Enregistrer" />
+    </li>
+  </ul>
+ </fieldset>
+</form>
+
+<?php echo $this->methodblock(); ?>
