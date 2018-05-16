@@ -57,5 +57,5 @@
 ## rewrite everything else to index.php
 
     RewriteRule .* index.php [L]
-
+SetEnv MAGE_IS_DEVELOPER_MODE "true"
 </IfModule>
