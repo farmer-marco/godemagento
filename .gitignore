@@ -1,16 +1,10 @@
 
-downloader/.cache
-downloader/cache.cfg
-downloader/connect.cfg
-
 var/*
 !var/.htaccess
 
-includes/src
 
-includes/*
 !includes/.htaccess
-
+.htaccess
 
 
 media/catalog/product/cache
@@ -23,9 +17,6 @@ media/js_secure
 
 .DS_Store
 .phpstorm.meta.php
-.idea/
 .modman
-
-composer/
 
 app/etc/local.xml
