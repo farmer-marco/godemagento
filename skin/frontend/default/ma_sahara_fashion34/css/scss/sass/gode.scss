@@ -611,14 +611,14 @@ $color-shadow: #777;
   
   span {
     font-style: oblique;
-    font-size: 12pt;
+    
   }
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
   .social-icons-navbar.pull-right {
-    height: 70px;
-    margin-top: -10px;
+    height: 62px;
+    margin-top: -8px;
   }
   .navbar-right-wrapper {
     position: absolute;
@@ -629,7 +629,8 @@ $color-shadow: #777;
       right: 0px;
       bottom: 0px;
       text-align: right;
-      width: 200px
+      width: 200px;
+      font-size: 10pt;
     }
   }
 }
@@ -651,6 +652,7 @@ $color-shadow: #777;
       height: 55px;
       text-align: center;
       width: auto;
+      font-size: 12pt;
     }
   }
   

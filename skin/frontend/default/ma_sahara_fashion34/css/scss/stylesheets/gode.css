@@ -1234,15 +1234,14 @@ span.nav-cor-sample {
 /* line 612, ../sass/gode.scss */
 .slogan span {
   font-style: oblique;
-  font-size: 12pt;
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   /* line 619, ../sass/gode.scss */
   .social-icons-navbar.pull-right {
-    height: 70px;
-    margin-top: -10px;
+    height: 62px;
+    margin-top: -8px;
   }
 
   /* line 623, ../sass/gode.scss */
@@ -1258,22 +1257,23 @@ span.nav-cor-sample {
     bottom: 0px;
     text-align: right;
     width: 200px;
+    font-size: 10pt;
   }
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  /* line 639, ../sass/gode.scss */
+  /* line 640, ../sass/gode.scss */
   .social-icons-navbar.pull-right {
     height: auto;
     margin-top: auto;
   }
 
-  /* line 643, ../sass/gode.scss */
+  /* line 644, ../sass/gode.scss */
   .navbar-right-wrapper {
     position: relative;
     right: auto;
   }
-  /* line 646, ../sass/gode.scss */
+  /* line 647, ../sass/gode.scss */
   .navbar-right-wrapper .slogan {
     display: inline-flex;
     align-items: center;
@@ -1282,16 +1282,17 @@ span.nav-cor-sample {
     height: 55px;
     text-align: center;
     width: auto;
+    font-size: 12pt;
   }
 }
-/* line 659, ../sass/gode.scss */
+/* line 661, ../sass/gode.scss */
 .slogan-mobile-wrap {
   position: absolute;
   right: 0px;
   left: 0px;
   top: 20px;
 }
-/* line 665, ../sass/gode.scss */
+/* line 667, ../sass/gode.scss */
 .slogan-mobile-wrap .slogan span {
   font-size: 9pt;
 }
