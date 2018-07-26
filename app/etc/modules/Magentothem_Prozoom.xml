@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Magentothem_Prozoom>
-            <active>true</active>
+            <active>false</active>
             <codePool>local</codePool>
         </Magentothem_Prozoom>
     </modules>

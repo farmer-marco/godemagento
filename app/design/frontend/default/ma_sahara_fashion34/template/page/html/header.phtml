@@ -54,6 +54,12 @@
                         <?php else: ?>
                             <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
                         <?php endif ?>
+                        
+                    </div>
+                    <div class="slogan-mobile-wrap visible-xs-block">
+                      <div class="slogan">
+                        <span>A Arte que Inspira</span>
+                      </div>
                     </div>
                     <div class="col-xs-6 hidden-sm hidden-lg hidden-md">
                         <div class="cart-mobile-wrapper">
@@ -88,6 +94,7 @@
                     </div>
                     <div class="hidden-xs col-sm-9 col-lg-10">
                         <?php echo $this->getChildHtml('topMenu') ?>
+
                     </div>
                 </div>
                 <span class="hidden-xs">

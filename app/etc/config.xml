@@ -143,8 +143,8 @@
         </system>
         <general>
             <locale>
-                <code>en_US</code>
-                <timezone>America/Los_Angeles</timezone>
+                <code>pt_BR</code>
+                <timezone>America/Sao_Paulo</timezone>
             </locale>
         </general>
     </default>

@@ -607,4 +607,65 @@ $color-shadow: #777;
   }
 }
 
+.slogan {
+  
+  span {
+    font-style: oblique;
+    font-size: 12pt;
+  }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .social-icons-navbar.pull-right {
+    height: 70px;
+    margin-top: -10px;
+  }
+  .navbar-right-wrapper {
+    position: absolute;
+    right: 0px;
+    .slogan {
+      float: right;
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      text-align: right;
+      width: 200px
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .social-icons-navbar.pull-right {
+    height: auto;
+    margin-top: auto;
+  }
+  .navbar-right-wrapper {
+    position: relative;
+    right: auto;
+    .slogan {
+      display: inline-flex;
+      align-items: center;
+      float: none;
+      position: relative;
+      height: 55px;
+      text-align: center;
+      width: auto;
+    }
+  }
+  
+}
+
+.slogan-mobile-wrap {
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  top: 20px;
+  .slogan {
+    span {
+      font-size: 9pt;
+    }
+  }
+}
+
 @import "small";
