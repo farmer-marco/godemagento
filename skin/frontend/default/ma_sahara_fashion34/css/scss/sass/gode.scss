@@ -621,6 +621,7 @@ $color-shadow: #777;
     margin-top: -8px;
   }
   .navbar-right-wrapper {
+    z-index: -1;
     position: absolute;
     right: 0px;
     .slogan {
