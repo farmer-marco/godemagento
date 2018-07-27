@@ -1,63 +1,64 @@
-<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
-<?php $_eventss = $this->getEventss(); ?>
-<div class="page-title events-title">
-    <h1><?php echo Mage::helper('ultimate_events')->__('Events') ?></h1>
-</div>
+<div class="container">
+	<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+	<?php $_eventss = $this->getEventss(); ?>
+	<div class="page-title events-title">
+	    <h1><?php echo Mage::helper('ultimate_events')->__('Events') ?></h1>
+	</div>
 
 
-<?php if ($_eventss->getSize() > 0) : ?>
-   
-<?php //echo $this->getPagerHtml(); ?>
+	<?php if ($_eventss->getSize() > 0) : ?>
+	   
+	<?php //echo $this->getPagerHtml(); ?>
 
-<div id='calendar'></div>
-<script>
+	<div id='calendar'></div>
+	<script>
 
-	jQuery(document).ready(function() {
+		jQuery(document).ready(function() {
 
-		jQuery('#calendar').fullCalendar({
-			<?php
-				$lang = Mage::app()->getLocale()->getLocaleCode(); 
-				$lang_converted;
-				if ($lang == "pt_BR") {
-					$lang_converted = 'pt-br';
-				} elseif ($lang == "en_GB") {
-					$lang_converted = 'en-gb';
-				} elseif ($lang == "es_ES") {
-					$lang_converted = 'es';
-				} else {
-					$lang_converted = $lang;
-				}
+			jQuery('#calendar').fullCalendar({
+				<?php
+					$lang = Mage::app()->getLocale()->getLocaleCode(); 
+					$lang_converted;
+					if ($lang == "pt_BR") {
+						$lang_converted = 'pt-br';
+					} elseif ($lang == "en_GB") {
+						$lang_converted = 'en-gb';
+					} elseif ($lang == "es_ES") {
+						$lang_converted = 'es';
+					} else {
+						$lang_converted = $lang;
+					}
 
-			?>
-
-			lang: '<?php echo $lang_converted;  ?>',
-			editable: false,
-			events: [
-                            
-                                
-                                <?php foreach ($_eventss as $_events) : ?>
-                                    {
-					title: '<?php echo $_events->getTitle();?>',
-					start: '<?php echo $_events->getDate();?>',
-                                        url: '<?php echo $_events->getEventsUrl()?>',
-                                    },
-                                <?php endforeach;?>
-                                    
-			]
+				?>
+				lang: '<?php echo $lang_converted;  ?>',
+				editable: false,
+				events: [
+	                            
+	                                
+	                                <?php foreach ($_eventss as $_events) : ?>
+	                                    {
+						title: '<?php echo $_events->getTitle();?>',
+						start: '<?php echo $_events->getDate();?>',
+	                                        url: '<?php echo $_events->getEventsUrl()?>',
+	                                    },
+	                                <?php endforeach;?>
+	                                    
+				]
+			});
+			
 		});
-		
-	});
 
-</script>
-<style type="text/css">
-#calendar {
-    width: 900px;
-    margin: auto;
-}
-</style>
+	</script>
+	<style type="text/css">
+	#calendar {
+	    max-width: 900px;
+	    margin: auto;
+	}
+	</style>
 
-<?php else : ?>
-    <?php echo Mage::helper('ultimate_events')->__('There are no events at this moment');?>
-<?php endif;?>
+	<?php else : ?>
+	    <?php echo Mage::helper('ultimate_events')->__('There are no events at this moment');?>
+	<?php endif;?>
 
-<?php //echo $this->getPagerHtml(); ?>
+	<?php //echo $this->getPagerHtml(); ?>
+</div>

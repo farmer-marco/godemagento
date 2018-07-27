@@ -35,6 +35,7 @@
         <action method="addCss">
             <stylesheet>fullcalendar/fullcalendar.css</stylesheet>
         </action>
+        
                 
 		<action method="addJs">
             <script>lib/moment.min.js</script>
