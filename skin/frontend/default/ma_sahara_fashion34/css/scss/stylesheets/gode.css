@@ -1313,6 +1313,20 @@ span.nav-cor-sample {
   top: 0px;
 }
 
+/* line 690, ../sass/gode.scss */
+.my-wishlist .product-image {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 0 5px;
+}
+/* line 695, ../sass/gode.scss */
+.my-wishlist .product-image img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
 @media (min-width: 768px) {
   /* line 6, ../sass/_small.scss */
   .gode-carousel {

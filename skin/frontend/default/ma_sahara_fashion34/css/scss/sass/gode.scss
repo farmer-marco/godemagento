@@ -685,4 +685,19 @@ $color-shadow: #777;
     top: 0px;
   }
 }
+
+.my-wishlist {
+  .product-image {
+    display: block; 
+    width: auto;
+    height: auto;
+    margin: 0 0 5px;
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+  }
+}
+
 @import "small";
