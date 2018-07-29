@@ -1304,6 +1304,15 @@ span.nav-cor-sample {
     padding: 10px;
   }
 }
+/* line 681, ../sass/gode.scss */
+.mercadopago-checkout-page .col-main {
+  margin-top: 150px;
+}
+/* line 684, ../sass/gode.scss */
+.mercadopago-checkout-page .header-container {
+  top: 0px;
+}
+
 @media (min-width: 768px) {
   /* line 6, ../sass/_small.scss */
   .gode-carousel {

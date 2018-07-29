@@ -677,4 +677,12 @@ $color-shadow: #777;
   }
 }
 
+.mercadopago-checkout-page {
+  .col-main {
+    margin-top: 150px;
+  }
+  .header-container {
+    top: 0px;
+  }
+}
 @import "small";
