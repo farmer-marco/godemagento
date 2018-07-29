@@ -671,4 +671,10 @@ $color-shadow: #777;
   }
 }
 
+@media (max-width: 992px) { 
+  .pt_custommenu div.pt_menu .parentMenu a, .pt_custommenu div.pt_menu .parentMenu span.block-title {
+    padding: 10px;
+  }
+}
+
 @import "small";
