@@ -44,9 +44,11 @@ class Ultimate_Events_Block_Adminhtml_Events_Edit_Tab_Form
 
         ));
 
-        $fieldset->addField('description', 'textarea', array(
+        $fieldset->addField('description', 'editor', array(
             'label' => Mage::helper('ultimate_events')->__('Event description'),
             'name'  => 'description',
+            'config' => Mage::getSingleton('cms/wysiwyg_config')->getConfig(),
+            'wysiwyg' => true,
             'required'  => true,
             'class' => 'required-entry',
 

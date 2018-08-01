@@ -29,6 +29,13 @@ class Ultimate_Events_Block_Adminhtml_Events_Edit
      * @return void
      * @author Ultimate Module Creator
      */
+    protected function _prepareLayout() {
+        parent::_prepareLayout();
+        if (Mage::getSingleton('cms/wysiwyg_config')->isEnabled()) {
+            $this->getLayout()->getBlock('head')->setCanLoadTinyMce(true);
+        }
+    }
+
     public function __construct(){
         parent::__construct();
         $this->_blockGroup = 'ultimate_events';
