@@ -55,7 +55,27 @@ class Gode_DestaquesSlider_Block_Monblock extends Mage_Core_Block_Template
 							echo '</h2>';
 							$_slider_product = Mage::getModel('catalog/product')->load($slider_product->getId());
 							$productBlock = $this->getLayout()->createBlock('catalog/product_price');
-							echo $productBlock->getPriceHtml($_slider_product);
+							// echo $productBlock->getPriceHtml($_slider_product);
+							if($_slider_product->isConfigurable())
+				            {
+				                $childProducts = Mage::getModel('catalog/product_type_configurable')->getUsedProducts(null,$_slider_product);
+				                $childPriceLowest = "";    
+				                $childPriceHighest = "";    
+
+				                foreach($childProducts as $child){
+				                    $_child = Mage::getModel('catalog/product')->load($child->getId());
+
+				                    if($childPriceLowest == '' || $childPriceLowest > $_child->getPrice() )
+				                    $childPriceLowest =  $_child->getPrice();
+
+				                }
+				                $formattedPrice = Mage::helper('core')->currency($childPriceLowest, true, false);
+				                echo '<div class="price-box"><span class="price">' . $this->__('from') . ' ' . $formattedPrice . '</span></div>';
+				            }
+				            
+				            else {
+				                echo $productBlock->getPriceHtml($_slider_product);
+				                }
 							echo '</div>';
 			        	}
 						
