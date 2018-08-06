@@ -13,6 +13,7 @@ media/css_secure
 media/js
 media/js_secure
 
+tmp/*
 
 
 .DS_Store

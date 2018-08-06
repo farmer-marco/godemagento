@@ -123,7 +123,28 @@
                     <?php //if($_product->getRatingSummary()): ?>
                     <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
                     <?php //endif; ?>
-                    <?php echo $this->getPriceHtml($_product, true) ?>
+                    <?php
+                    if($_product->isConfigurable())
+                    {
+                        $childProducts = Mage::getModel('catalog/product_type_configurable')->getUsedProducts(null,$_product);
+                        $childPriceLowest = "";    
+                        $childPriceHighest = "";    
+
+                        foreach($childProducts as $child){
+                            $_child = Mage::getModel('catalog/product')->load($child->getId());
+
+                            if($childPriceLowest == '' || $childPriceLowest > $_child->getPrice() )
+                            $childPriceLowest =  $_child->getPrice();
+
+                        }
+                        $formattedPrice = Mage::helper('core')->currency($childPriceLowest, true, false);
+                        echo '<div class="price-box"><span class="price">' . $this->__('from') . ' ' . $formattedPrice . '</span></div>';
+                    }
+                    
+                    else {
+                        echo $this->getPriceHtml($_product, true);
+                        }
+                    ?>
                     <div class="actions">
                         
                         <ul class="add-to-links">
