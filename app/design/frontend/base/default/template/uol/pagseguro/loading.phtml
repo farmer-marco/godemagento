@@ -22,7 +22,7 @@ limitations under the License.
 <?php
     $helper = Mage::helper('pagseguro');
     $pagSeguroDirectPaymentJs = $helper->getPagSeguroDirectPaymentJs();
-    $baseUrl = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
+    $baseUrl = Mage::getUrl('',array('_secure'=>true));
     $adminSkinUrl = $baseUrl . 'skin/adminhtml/default/default/';
 ?>
 
