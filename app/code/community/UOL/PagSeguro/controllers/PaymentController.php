@@ -209,7 +209,7 @@ class UOL_PagSeguro_PaymentController extends Mage_Core_Controller_Front_Action
             Mage::logException($exception);
             $this->canceledStatus($order);
         }
-        if ($this->payment->getEnvironment() === 'production') {
+        if (Mage::getStoreConfig('payment/pagseguro/environment') === 'production') {
             $lightboxJs  = 'https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js';
             $lightboxUrl = 'https://pagseguro.uol.com.br/v2/checkout/payment.html?code=';
         } else {
