@@ -21,3 +21,6 @@ tmp/*
 .modman
 
 app/etc/local.xml
+
+downloader/.cache
+downloader/cache.cfg
