@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @media (max-width: 767px) {
   /* line 2, ../sass/_mobile_only.scss */
   .toolbar {
@@ -667,7 +666,7 @@ span.nav-cor-sample {
 }
 
 /* line 119, ../sass/gode.scss */
-.cor-brown, .cor-marrón, .cor-castanho {
+.cor-brown, .cor-marron, .cor-castanho {
   background-image: url('data:image/svg+xml;utf8,<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-1 -1 37 37" enable-background="new 0 0 37 37" xml:space="preserve"><g id="Layer_2"><g><path fill="#A5722B" d="M17.5,0C7.8,0,0,7.8,0,17.5C0,27.2,7.8,35,17.5,35C27.2,35,35,27.2,35,17.5C35,7.8,27.2,0,17.5,0z M10.6,21c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C12.7,20,11.8,21,10.6,21z"/></g></g></svg>');
 }
 
@@ -946,7 +945,7 @@ span.nav-cor-sample {
 }
 /* line 357, ../sass/gode.scss */
 .top-link ul.links .pslogin-block .pslogin-buttons ul li .pslogin-button-link {
-  heigh: 23px;
+  height: 23px;
 }
 /* line 359, ../sass/gode.scss */
 .top-link ul.links .pslogin-block .pslogin-buttons ul li .pslogin-button-link .pslogin-button-auto {
